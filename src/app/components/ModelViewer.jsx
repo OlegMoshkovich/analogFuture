@@ -33,7 +33,10 @@ function RhinoModel({ url }) {
       const maxDim = Math.max(size.x, size.y, size.z);
       const fov = camera.fov * (Math.PI / 180); // Convert vertical fov to radians
       const cameraDistance = Math.abs(maxDim / 2 / Math.tan(fov / 2));
-      camera.position.z = cameraDistance;
+
+      // Adjust camera distance for mobile devices
+      const isMobile = window.innerWidth <= 600;
+      camera.position.z = isMobile ? cameraDistance * 1.5 : cameraDistance;
 
       // Render the scene with the new model
       ref.current = object;
