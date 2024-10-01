@@ -28,6 +28,9 @@ function RhinoModel({ url, isRotating }) {
 
       object.position.sub(center);
 
+      // Move the model up by adjusting its position
+      object.position.y += size.y / 2;
+
       const maxDim = Math.max(size.x, size.y, size.z);
       const fov = camera.fov * (Math.PI / 180);
       const cameraDistance = Math.abs(maxDim / 2 / Math.tan(fov / 2));
