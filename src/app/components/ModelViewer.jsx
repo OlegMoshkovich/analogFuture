@@ -1,13 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Rhino3dmLoader } from 'three/examples/jsm/loaders/3DMLoader';
-import { Box3, Vector3 } from 'three';
+import { Box3, Vector3, Group } from 'three';
 
 function RhinoModel({ url }) {
   const ref = useRef();
   const { camera, scene } = useThree();
   const [model, setModel] = useState(null);
+  const [angle, setAngle] = useState(0);
 
   useEffect(() => {
     // Initialize the Rhino3dmLoader and load the model
@@ -17,7 +18,11 @@ function RhinoModel({ url }) {
     loader.load(url, (object) => {
       // Once loaded, add the model to the scene and set state
       setModel(object);
-      scene.add(object);
+
+      // Create a group to hold the model and center it
+      const group = new Group();
+      group.add(object);
+      scene.add(group);
 
       // Calculate the bounding box to center the model
       const box = new Box3().setFromObject(object);
@@ -39,7 +44,7 @@ function RhinoModel({ url }) {
       camera.position.z = isMobile ? cameraDistance * 1.5 : cameraDistance;
 
       // Render the scene with the new model
-      ref.current = object;
+      ref.current = group;
     });
 
     return () => {
@@ -47,6 +52,15 @@ function RhinoModel({ url }) {
       if (model) scene.remove(model);
     };
   }, [url, camera, scene]);
+
+  // Add back and forth rotation to the model
+  useFrame(({ clock }) => {
+    if (ref.current) {
+      const time = clock.getElapsedTime();
+      const rotationAngle = Math.sin(time) * (Math.PI / 90); // 2 degrees in radians
+      ref.current.rotation.y = rotationAngle;
+    }
+  });
 
   return null; // We don't return JSX since we're directly adding the model to the scene
 }
