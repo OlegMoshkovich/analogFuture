@@ -49,7 +49,7 @@ function RhinoModel({ url, isRotating }) {
   useFrame(({ clock }) => {
     if (ref.current && isRotating) {
       const time = clock.getElapsedTime();
-      const rotationAngle = Math.sin(time) * (Math.PI / 90);
+      const rotationAngle = Math.sin(time) * (Math.PI / 10);
       ref.current.rotation.y = rotationAngle;
     }
   });
