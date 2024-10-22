@@ -23,7 +23,7 @@ export default function Home({ isRotating }) {
         <ModelViewer modelUrl="/analog_future.3dm" isRotating={isRotating} initialZoom={1} />
       </div>
       <Chip
-        label="Chat with KindRobot"
+        label="Chat with Kind Robot"
         clickable
         onClick={handleChipClick}
         sx={{

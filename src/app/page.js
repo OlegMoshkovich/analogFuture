@@ -21,10 +21,10 @@ export default function Page() {
   return (
     <div style={{ width: '100dvw', height: '100dvh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
       <div
-        onClick={handleTitleClick}
+        // onClick={handleTitleClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ cursor: 'pointer', width:'200px', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+        style={{ width:'200px', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
         <h1 style={{ fontSize: '1rem', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1em' }}>
           {isHovered ? 'play' : 'Analog Future'}

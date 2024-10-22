@@ -11,7 +11,6 @@ const KindRobot = () => {
     const router = useRouter(); // Initialize the router
 
     const handleTitleClick = () => {
-      setIsRotating(!isRotating);
       router.push('/'); // Navigate to the index page
     };
 
@@ -29,10 +28,10 @@ const KindRobot = () => {
         onClick={handleTitleClick} // Add onClick event
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ cursor: 'pointer', width:'200px', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+        style={{ cursor: 'default', width:'200px', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
-        <h1 style={{ fontSize: '1rem',  marginTop: '2rem', marginBottom: '1em', fontFamily: 'monospace', color: 'lightgrey' }}>
-          {isHovered ? 'hi' : 'Analog Future'}
+        <h1 style={{ fontSize: '1rem',  marginTop: '1.6rem', marginBottom: '1em', fontFamily: 'monospace', color: 'grey' }}>
+          {isHovered ? 'hi' : 'Kind Robot'}
         </h1>
       </div>
       <Box sx={{ width: '100%', mb: 4 }}>
@@ -47,6 +46,11 @@ const KindRobot = () => {
       <Stack sx={{ width: '100%' }} justifyContent="center" alignItems="center">
         <ChatComponent /> {/* Render the ChatComponent below the ModelViewer */}
       </Stack>
+      {/* <a href="https://coolbuildings.xyz" target='_blank'
+      style={{ position: 'absolute', bottom: '2rem', right: '2rem', fontSize: '0.8rem', color: 'grey', fontFamily: 'monospace' }}>
+        check out cool buildlings
+    </a> */}
+      <a href="/"style={{ position: 'absolute', fontFamily: 'monospace', bottom: '2rem', left: '2rem', fontSize: '.8rem', color: 'grey' }}> back </a>
     </div>
   );
 };
