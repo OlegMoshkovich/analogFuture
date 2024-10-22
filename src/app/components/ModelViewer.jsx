@@ -61,9 +61,9 @@ function RhinoModel({ url, isRotating, initialZoom, initialPosition, verticalOff
   return null;
 }
 
-export default function ModelViewer({ modelUrl, isRotating, initialZoom = 1, initialPosition = { x: 0, y: 0, z: 0 }, verticalOffset = 0 }) {
+export default function ModelViewer({ modelUrl, isRotating, initialZoom = 1, initialPosition = { x: 0, y: 0, z: 0 }, verticalOffset = 0, height = '400px' }) {
   return (
-    <Canvas style={{ width: '100vw', height: '400px'}}>
+    <Canvas style={{ width: '100vw', height }}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <RhinoModel url={modelUrl} isRotating={isRotating} initialZoom={initialZoom} initialPosition={initialPosition} verticalOffset={verticalOffset} />

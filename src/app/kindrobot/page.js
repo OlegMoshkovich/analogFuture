@@ -11,10 +11,6 @@ const KindRobot = () => {
     const [isHovered, setIsHovered] = useState(false);
     const router = useRouter(); // Initialize the router
 
-    const handleTitleClick = () => {
-      router.push('/'); // Navigate to the index page
-    };
-
     const handleMouseEnter = () => {
       setIsHovered(true);
     };
@@ -36,7 +32,6 @@ const KindRobot = () => {
         }}
       >
         <div
-          onClick={handleTitleClick} // Add onClick event
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           style={{
@@ -67,6 +62,7 @@ const KindRobot = () => {
             initialZoom={3}
             initialPosition={{ x: 0, y: 0, z: 50 }} // Default position
             verticalOffset={50} // Bring the model down by 26 units
+            height="300px" // Set the height to 300px
           />
         </Box>
         <Stack sx={{ width: '100%' }} justifyContent="center" alignItems="center">
@@ -77,7 +73,7 @@ const KindRobot = () => {
           style={{
             position: 'absolute',
             fontFamily: 'monospace',
-            bottom: '2rem',
+            bottom: '1rem',
             left: '2rem',
             fontSize: '.8rem',
             color: 'grey'

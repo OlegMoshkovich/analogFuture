@@ -47,7 +47,7 @@ function ChatComponent() {
             '& .MuiOutlinedInput-root': {
               backgroundColor: 'white',
               color: 'black',
-              borderRadius: '100px',
+              borderRadius: '20px',
               '& fieldset': {
                 borderColor: 'darkgrey', // Consistent border color
               },
@@ -98,7 +98,7 @@ function ChatComponent() {
             maxWidth: 500,
             height: '50px', // Set fixed height
             backgroundColor: '#ececec',
-            borderRadius: '30px',
+            borderRadius: '20px',
             p: 2,
             overflowY: 'auto', // Make it scrollable
           }}
