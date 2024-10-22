@@ -38,7 +38,7 @@ function ChatComponent() {
         <TextField
           fullWidth
           variant="outlined"
-          label="Chat with KindRobot"
+          label=""
           value={question}
           onChange={handleInputChange}
           required
@@ -47,7 +47,7 @@ function ChatComponent() {
             '& .MuiOutlinedInput-root': {
               backgroundColor: 'white',
               color: 'black',
-              borderRadius: '0px',
+              borderRadius: '40px',
               '& fieldset': {
                 borderColor: 'darkgrey', // Consistent border color
               },
@@ -97,8 +97,8 @@ function ChatComponent() {
           sx={{
             maxWidth: 500,
             height: '100px', // Set fixed height
-            backgroundColor: '#ececec',
-            borderRadius: '0px',
+            backgroundColor: 'white',
+            borderRadius: '5px',
             p: 2,
             overflowY: 'auto', // Make it scrollable
           }}
@@ -110,6 +110,7 @@ function ChatComponent() {
               whiteSpace: 'pre-wrap', // Ensures text wraps within the box
               wordWrap: 'break-word', // Breaks long words to prevent overflow
               color: 'black',
+              textAlign: 'center', // Center the text
             }}
           >
             {response}

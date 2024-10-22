@@ -52,7 +52,7 @@ const KindRobot = () => {
               marginTop: '2em',
             }}
           >
-            {isHovered ? 'hi' : 'Kind Robot'}
+            {isHovered ? 'hi' : 'kind robot'}
           </h1>
         </div>
         <Box sx={{ width: '100%' }}>
