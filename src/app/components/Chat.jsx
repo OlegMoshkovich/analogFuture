@@ -96,7 +96,7 @@ function ChatComponent() {
           mt={4}
           sx={{
             maxWidth: 500,
-            height: '50px', // Set fixed height
+            height: '100px', // Set fixed height
             backgroundColor: '#ececec',
             borderRadius: '20px',
             p: 2,
