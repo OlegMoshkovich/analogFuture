@@ -109,6 +109,7 @@ function ChatComponent() {
             sx={{
               whiteSpace: 'pre-wrap', // Ensures text wraps within the box
               wordWrap: 'break-word', // Breaks long words to prevent overflow
+              color: 'black',
             }}
           >
             {response}

@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Home from './components/Home';
+import Home from './Components/Home';
 
 export default function Page() {
   const [isRotating, setIsRotating] = useState(false);
