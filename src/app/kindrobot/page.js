@@ -48,7 +48,7 @@ const KindRobot = () => {
               fontSize: '1rem',
               fontFamily: 'monospace',
               color: 'grey',
-              marginBottom: '1em',
+              marginBottom: '2em',
               marginTop: '2em',
             }}
           >
