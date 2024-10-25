@@ -33,7 +33,7 @@ function ChatComponent() {
   };
 
   return (
-    <Box sx={{ width: '100%', maxWidth: isMobile ? '80%' : 500, mt: 4 }}>
+    <Box sx={{ width: '100%', maxWidth: isMobile ? '80%' : 500, mt: 4 , border: '1px solid black'}}>
       <form onSubmit={handleSubmit}>
         <TextField
           fullWidth

@@ -8,6 +8,8 @@ function RhinoModel({ url, isRotating, initialZoom, initialPosition, verticalOff
   const ref = useRef();
   const { camera, scene } = useThree();
   const [model, setModel] = useState(null);
+  const [initialRotationDone, setInitialRotationDone] = useState(false);
+  const [rotationProgress, setRotationProgress] = useState(0);
 
   useEffect(() => {
     const loader = new Rhino3dmLoader();
@@ -51,10 +53,21 @@ function RhinoModel({ url, isRotating, initialZoom, initialPosition, verticalOff
   }, [url, camera, scene, initialZoom, initialPosition, verticalOffset]);
 
   useFrame(({ clock }) => {
-    if (ref.current && isRotating) {
-      const time = clock.getElapsedTime();
-      const rotationAngle = Math.sin(time) * (Math.PI / 10);
-      ref.current.rotation.y = rotationAngle;
+    if (ref.current) {
+      if (!initialRotationDone) {
+        const maxRotation = Math.PI / 18; // 10 degrees in radians
+        const speed = 0.02; // Adjust speed of rotation
+        if (rotationProgress < 1) {
+          ref.current.rotation.y = maxRotation * Math.sin(rotationProgress * Math.PI);
+          setRotationProgress(rotationProgress + speed);
+        } else {
+          setInitialRotationDone(true);
+        }
+      } else if (isRotating) {
+        const time = clock.getElapsedTime();
+        const rotationAngle = Math.sin(time) * (Math.PI / 10);
+        ref.current.rotation.y = rotationAngle;
+      }
     }
   });
 
