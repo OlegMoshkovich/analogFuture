@@ -14,11 +14,11 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Analog Future",
-  description: "We are a small agency on the intersection of architecture and technology.",
+  description: "Digital agency",
   openGraph: {
     title: "Analog Future",
-    description: "We are a small agency on the intersection of architecture and technology.",
-    url: "https://analogfuture.xyz",
+    description: "Digital agency",
+    // url: "https://analogfuture.xyz",
     images: [
       {
         url: "/images/social-preview.png",
@@ -32,7 +32,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Analog Future",
-    description: "Chat with kind robot",
+    description: "Digital agency",
     image: "/images/social-preview.png",
   },
 };

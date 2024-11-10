@@ -71,7 +71,7 @@ const KindRobot = () => {
           <ChatComponent /> {/* Render the ChatComponent below the ModelViewer */}
         </Stack>
           {/* <a href="https://www.pinterest.com/olegmoshkovich/analog-future/" target='_blank' style={{ position: 'absolute', bottom: '2rem', right: '2rem', fontSize: '0.8rem', color: 'grey' }}>Thoughts about analog future .. </a> */}
-          <a href="https://x.com/olegmoshkovich" target='_blank' style={{ position: 'absolute', bottom: '2rem', left: '2rem', fontSize: '0.8rem', color: 'grey' }}>@OlegMoshkovich</a>
+          <a href="/" target='_blank' style={{ position: 'absolute', fontWeight: 'bold', bottom: '2rem', left: '2rem', fontSize: '0.8rem', color: 'grey' }}>  &lt;&lt;</a>
       </div>
     );
 };
