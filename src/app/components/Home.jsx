@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import ModelViewer from './ModelViewer';
-import { Chip } from '@mui/material';
+import { Chip, Stack } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { useMediaQuery } from '@mui/material';
 
@@ -13,11 +13,9 @@ export default function Home({ isRotating }) {
     setIsClient(true);
   }, []);
 
-  const handleChipClick = () => {
-    if (isClient) {
-      router.push('/kindrobot');
-    }
-  };
+  const handleChipClick = useCallback(() => {
+    window.open('https://workspace.berlin', '_blank');
+  }, []);
 
   return (
     <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center' }}>
@@ -29,21 +27,60 @@ export default function Home({ isRotating }) {
           height={isMobile ? '450px' : '550px'} // Use MUI's useMediaQuery for responsive height
         />
       </div>
-      <Chip
-        label="Chat with kind robot"
-        clickable
-        onClick={handleChipClick}
-        sx={{
-          mt: 2,
-          backgroundColor: 'white',
-          color: '#141414 ',
-          marginTop: '4rem',
-          '&:hover': {
-            backgroundColor: '#141414',
+      <Stack spacing={1} marginTop={'-50px'}>
+        <Chip
+          label="Cadence"
+          clickable
+          onClick={() => window.open('https://cadence.day', '_blank')}
+          sx={{
+            backgroundColor: '#212121',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: '#141414',
+              color: 'white',
+            },
+          }}
+        />
+        <Chip
+          label="Workspace"
+          clickable
+          onClick={handleChipClick}
+          sx={{
+            backgroundColor: '#212121',
+            color: 'white',
+            '&:hover': {
+              backgroundColor: '#141414',
+              color: 'white',
+            },
+          }}
+        />
+          <Chip
+          label="Cool Buildings"
+          clickable
+          onClick={() => window.open('https://coolbuildings.xyz', '_blank')}
+          sx={{
+            backgroundColor: '#212121',
             color: 'white ',
-          },
-        }}
-      />
+            '&:hover': {
+              backgroundColor: '#141414',
+              color: 'white ',
+            },
+          }}
+        />
+          <Chip
+          label="Kind Robot"
+          clickable
+          onClick={() => window.open('/kindrobot', '_blank')}
+          sx={{
+            backgroundColor: '#212121',
+            color: 'white ',
+            '&:hover': {
+              backgroundColor: '#141414',
+              color: 'white ',
+            },
+          }}
+        />
+      </Stack>
     </div>
   );
 }
