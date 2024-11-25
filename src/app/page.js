@@ -131,7 +131,7 @@ export default function Page() {
           }}
         >
           <Typography variant="body2">
-          Analog Future is an outlet for thoughts and ideas, expressed through code, words, and images.
+          A.F. is an outlet for ideas, expressed through code, words, and images.
             <br />
             We are currently exploring concepts of time, daily patterns, digital workspaces and expert ai systems.
           </Typography>
