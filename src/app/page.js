@@ -88,26 +88,6 @@ export default function Page() {
           }}
         />
       </Tooltip>
-      {/* <Tooltip  title={isMobile?'':"Maybe it feels like this..?"}>
-        <Box
-          onClick={() => window.open('https://www.pinterest.com/olegmoshkovich/maybe-it-feels-like-this/', '_blank')}
-          sx={{
-            position: 'absolute',
-            bottom: '2rem',
-            right: '6.2rem',
-            width: '14px',
-            height: '12px',
-            marginBottom: '3px',
-            backgroundColor: 'darkgrey',
-            border: '3px solid black',
-            cursor: 'pointer',
-            '@media (max-width: 600px)': {
-              right: '2rem',
-              bottom: '4rem',
-            },
-          }}
-        />
-      </Tooltip> */}
       <Dialog
         open={isDialogOpen}
         onClose={handleDialogClose}
