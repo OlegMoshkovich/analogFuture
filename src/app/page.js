@@ -5,6 +5,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
+import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -82,12 +83,12 @@ export default function Page() {
             border: '3px solid black',
             cursor: 'pointer',
             '@media (max-width: 600px)': {
-              left: '6rem',
+              left: '5rem',
             },
           }}
         />
       </Tooltip>
-      <Tooltip  title={isMobile?'':"Maybe it feels like this..?"}>
+      {/* <Tooltip  title={isMobile?'':"Maybe it feels like this..?"}>
         <Box
           onClick={() => window.open('https://www.pinterest.com/olegmoshkovich/maybe-it-feels-like-this/', '_blank')}
           sx={{
@@ -106,7 +107,7 @@ export default function Page() {
             },
           }}
         />
-      </Tooltip>
+      </Tooltip> */}
       <Dialog
         open={isDialogOpen}
         onClose={handleDialogClose}
@@ -165,9 +166,6 @@ export default function Page() {
             },
           }}
         >
-          {/* <Typography variant="body2">
-            Share this content with your friends!
-          </Typography> */}
           <img src="/images/qrcode.png" alt="Share" style={{ width: '80px', height: '80px', marginTop: '10px' }} />
         </DialogContent>
         <DialogActions>
@@ -176,8 +174,11 @@ export default function Page() {
           </Button>
         </DialogActions>
       </Dialog>
-      <a href="https://x.com/analogfuture00" target='_blank' style={{ position: 'absolute', bottom: '2rem', right: '2rem', fontSize: '0.8rem', color: 'lightgrey' }}>Thoughts</a>
-      <style jsx>{`
+      <Stack direction="row" spacing={2} sx={{ position: 'absolute', bottom: '2rem', right: '2rem', fontSize: '0.8rem', color: 'lightgrey' }}>
+      <a href="https://x.com/analogfuture00" target='_blank' >Words</a>
+      <a href="https://www.pinterest.com/olegmoshkovich/maybe-it-feels-like-this/" target='_blank' >Images</a>
+      </Stack>
+        <style jsx>{`
         @media (max-width: 600px) {
           h1 {
             margin-top: 1em;
