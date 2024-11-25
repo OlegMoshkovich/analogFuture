@@ -50,7 +50,7 @@ export default function Home({ isRotating }) {
           height={isMobile ? '450px' : '550px'} // Use MUI's useMediaQuery for responsive height
         />
       </div>
-      <Stack spacing={1} sx={{ marginTop: '-260px' }}>
+      <Stack spacing={1} sx={{ marginTop: '-278px' }}>
         <Chip
           label="Cadence"
           clickable
@@ -74,6 +74,19 @@ export default function Home({ isRotating }) {
             '&:hover': {
               backgroundColor: '#141414',
               color: 'white',
+            },
+          }}
+        />
+        <Chip
+          label="Cool Buildings"
+          clickable
+          onClick={() => window.open('https://coolbuildings.xyz', '_blank')}
+          sx={{
+            backgroundColor: '#212121',
+            color: 'white ',
+            '&:hover': {
+              backgroundColor: '#141414',
+              color: 'white ',
             },
           }}
         />

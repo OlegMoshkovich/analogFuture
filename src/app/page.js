@@ -97,7 +97,7 @@ export default function Page() {
             width: '14px',
             height: '12px',
             marginBottom: '3px',
-            backgroundColor: 'black',
+            backgroundColor: 'darkgrey',
             border: '3px solid black',
             cursor: 'pointer',
             '@media (max-width: 600px)': {
