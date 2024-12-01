@@ -69,25 +69,6 @@ export default function Page() {
       <Home isRotating={isRotating} />
       {/* <a href="https://www.pinterest.com/olegmoshkovich/analog-future/" target='_blank' style={{ position: 'absolute', bottom: '2rem', right: '2rem', fontSize: '0.8rem', color: 'lightgrey' }}>Blog</a> */}
       <a onClick={handleDialogOpen} style={{ position: 'absolute', bottom: '2rem', left: '2rem', fontSize: '0.8rem', color: 'lightgrey', cursor: 'pointer' }}>About</a>
-      <Tooltip title={isMobile?'':"Share"}>
-        <Box
-          onClick={handleShareDialogOpen}
-          sx={{
-            position: 'absolute',
-            bottom: '2rem',
-            left: '5rem',
-            width: '12px',
-            height: '12px',
-            marginBottom: '3px',
-            backgroundColor: 'white',
-            border: '3px solid black',
-            cursor: 'pointer',
-            '@media (max-width: 600px)': {
-              left: '5rem',
-            },
-          }}
-        />
-      </Tooltip>
       <Dialog
         open={isDialogOpen}
         onClose={handleDialogClose}
@@ -155,8 +136,18 @@ export default function Page() {
         </DialogActions>
       </Dialog>
       <Stack direction="row" spacing={2} sx={{ position: 'absolute', bottom: '2rem', right: '2rem', fontSize: '0.8rem', color: 'lightgrey' }}>
-      <a href="https://x.com/analogfuture00" target='_blank' >Words</a>
-      <a href="https://www.pinterest.com/olegmoshkovich/maybe-it-feels-like-this/" target='_blank' >Images</a>
+      {/* <a href="https://x.com/analogfuture00" target='_blank' >Words</a>
+      <a href="https://www.pinterest.com/olegmoshkovich/maybe-it-feels-like-this/" target='_blank' >Images</a> */}
+        <Typography
+          variant='caption'
+          onClick={handleShareDialogOpen}
+          sx={{
+            cursor: 'pointer',
+            color: 'lightgrey',
+          }}
+        >
+          Share
+        </Typography>
       </Stack>
         <style jsx>{`
         @media (max-width: 600px) {
