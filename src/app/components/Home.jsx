@@ -20,26 +20,11 @@ export default function Home({ isRotating }) {
   return (
     <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center' }}>
       <div
-        style={{ width:'97%', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1rem', cursor: 'pointer' }}
+        style={{ width:'97%', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem', cursor: 'pointer' }}
       >
-        {/* <div   onClick={() => window.open('https://coolbuildings.xyz', '_blank')}>
-        <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="23" width="84" height="54" fill="black" stroke="white" stroke-width="6"/>
-        </svg>
-        </div> */}
-        <div  onClick={() => window.open('/kindrobot', '_blank')}>
-        <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="23" width="84" height="54" fill="black" stroke="white" stroke-width="6"/>
-          <circle cx="70" cy="46" r="7.5" stroke="white" stroke-width="7"/>
-          <circle cx="30" cy="46" r="7.5" stroke="white" stroke-width="7"/>
-          <rect x="30.5" y="64.5" width="39" height="11" fill="white" stroke="white"/>
-        </svg>
-        </div>
-        {/* <div  onClick={() => window.open('https://workspace.berlin', '_blank')}>
-        <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="23" width="54" height="54" fill="black" stroke="white" stroke-width="6"/>
-        </svg>
-        </div> */}
+        <a href="/kindrobot">
+          <img src="/images/logo.png" alt="Logo" width="50" height="50" style={{ cursor: 'pointer' }} />
+        </a>
       </div>
 
       <div style={{ width: '100%', height: '100%', mb: 4 }}>
