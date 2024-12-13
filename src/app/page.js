@@ -95,7 +95,7 @@ export default function Page() {
           <Typography variant="body2">
           AF is an outlet for ideas, expressed through code, words, and images.
             <br />
-            We are currently exploring concepts of time, daily patterns, digital workspaces and expert ai systems.
+            We are currently exploring concepts of  daily patterns and digital workspaces.
           </Typography>
         </DialogContent>
         <DialogActions>
@@ -143,7 +143,7 @@ export default function Page() {
           onClick={handleShareDialogOpen}
           sx={{
             cursor: 'pointer',
-            color: 'lightgrey',
+            color: '#3B3B3B',
           }}
         >
           Share

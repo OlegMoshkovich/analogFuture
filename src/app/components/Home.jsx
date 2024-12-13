@@ -75,7 +75,7 @@ export default function Home({ isRotating }) {
             },
           }}
         />
-        <Chip
+        {/* <Chip
           label="Kind Robot"
           clickable
           onClick={() => window.open('/kindrobot', '_blank')}
@@ -87,7 +87,7 @@ export default function Home({ isRotating }) {
               color: 'white ',
             },
           }}
-        />
+        /> */}
       </Stack>
     </div>
   );

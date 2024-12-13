@@ -55,7 +55,7 @@ function RhinoModel({ url, isRotating, initialZoom, initialPosition, verticalOff
   useFrame(({ clock }) => {
     if (ref.current) {
       if (!initialRotationDone) {
-        const maxRotation = Math.PI / 18; // 10 degrees in radians
+        const maxRotation = Math.PI / 10; // 10 degrees in radians
         const speed = 0.02; // Adjust speed of rotation
         if (rotationProgress < 1) {
           ref.current.rotation.y = maxRotation * Math.sin(rotationProgress * Math.PI);
