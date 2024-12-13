@@ -20,7 +20,7 @@ export default function Home({ isRotating }) {
   return (
     <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center' }}>
       <div
-        style={{ width:'97%', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem', cursor: 'pointer' }}
+        style={{ width:'97%', height:'40px', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1rem', marginBottom: '1rem',  cursor: 'pointer' }}
       >
         <a href="/kindrobot">
           <img src="/images/logo.png" alt="Logo" width="50" height="50" style={{ cursor: 'pointer' }} />
