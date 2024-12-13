@@ -95,7 +95,7 @@ export default function Page() {
           <Typography variant="body2">
           AF is an outlet for ideas, expressed through code, words, and images.
             <br />
-            We are currently exploring concepts of  daily patterns and digital workspaces.
+            We are currently exploring concepts of daily patterns, digital workspaces and unique architectural artifacts.
           </Typography>
         </DialogContent>
         <DialogActions>
