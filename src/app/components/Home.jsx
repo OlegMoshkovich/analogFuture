@@ -39,7 +39,7 @@ export default function Home({ isRotating }) {
         <Chip
           label="Cadence"
           clickable
-          onClick={() => window.open('https://cadence.day', '_blank')}
+          onClick={() => window.open('https://readymag.website/u78188942/5162037/', '_blank')}
           sx={{
             backgroundColor: '#212121',
             color: 'white',
