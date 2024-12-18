@@ -31,7 +31,8 @@ export default function Home({ isRotating }) {
         <ModelViewer
           modelUrl="/analog_future.3dm"
           isRotating={isRotating}
-          initialZoom={.8}
+          initialZoom={.6}
+          verticalOffset={-3}
           height={isMobile ? '450px' : '550px'} // Use MUI's useMediaQuery for responsive height
         />
       </div>

@@ -61,7 +61,7 @@ const KindRobot = () => {
           <ModelViewer
             modelUrl="/kind_robot.3dm"
             isRotating={isRotating}
-            initialZoom={4}
+            initialZoom={2}
             initialPosition={{ x: 0, y: 0, z: 50 }} // Default position
             verticalOffset={50} // Bring the model down by 26 units
             height={isMobile ? '200px' : '300px'} // Adjust height based on device
